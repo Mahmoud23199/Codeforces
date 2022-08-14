@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std ;
+ 
+int main ()
+{
+ 
+	int num,number=0;
+	string op[150];
+	cin >> num;
+ 
+	for (int i = 0; i < num ; i++)
+	{
+		cin >> op[i] ;
+ 
+	}
+ 
+	string op1 = "++X";
+	string op2 = "--X";
+	string op11 = "X++";
+	string op22= "X--";
+ 
+	for (int i = 0; i < num; i++)
+	{
+ 
+		if ((op[i]== op1)||(op[i]==op11))
+		{
+			number++;
+		}
+ 
+		if ((op[i] == op2)||(op[i] == op22))
+		{
+			number--;
+		}
+	}
+	
+	
+ 
+	cout << number << endl;
+ 
+ 
+ 
+ 
+ 
+	system("pasue");
+ 
+ 
+	return 0;
+}
