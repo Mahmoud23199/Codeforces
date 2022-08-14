@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std ;
+ 
+int main ()
+{
+	int n,a,count=0,j=0;
+	//cout << "enter n"<<endl;
+	cin >> n;
+	//cout << "enter a"<<endl;
+	cin >> a;
+	
+	j = n*a;
+	j = j / 2;
+	
+	cout << j;
+ 
+	system("pasue");
+ 
+ 
+	return 0;
+}
