@@ -1,0 +1,78 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+
+            var num_test = Console.ReadLine();
+            int num = int.Parse(num_test);
+
+            int[] arr = new int[num];
+            for (int i = 0; i < num; i++)
+            {
+                var temp=Console.ReadLine();
+                int test=int.Parse(temp);
+                if (test % 2==0)
+                {
+                    test = test-1;
+                }
+                
+                    counter = test / 2;
+                arr[i] = counter;
+                
+
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+
+            }
+
+           
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
