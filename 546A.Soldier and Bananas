@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CodePS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            var line = Console.ReadLine();
+            var data = line.Split(' ');
+            var k = int.Parse(data[0]); //first integer
+            var n = int.Parse(data[1]); //second integer
+            var w = int.Parse(data[2]);
+            int price = 0;
+
+            for (int i = 0; i < w; i++)
+            {
+                price = price + (k *( i + 1));
+
+            }
+            if (price > n)
+            {
+                price -= n;
+            }
+            else { price = 0; }
+
+
+            Console.WriteLine(price);
+
+
+
+        }
+    }
+}
