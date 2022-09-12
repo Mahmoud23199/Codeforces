@@ -1,0 +1,40 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            bool flag = true;
+
+            var num =Console.ReadLine();
+
+            var line1 = Console.ReadLine();
+            var temp = line1.Split(' ');
+
+            for (int i = 0; i < int.Parse(num); i++)
+            {
+                int cheack = int.Parse(temp[i]);
+
+                if (cheack==1)
+                {
+                    flag = false;   
+                    break;
+                    
+                }
+
+            }
+            if (flag==false)
+            {
+                Console.WriteLine("HARD");
+            }
+            else Console.WriteLine("EASY");
+
+           
+
+
+        }
+    }
+}
