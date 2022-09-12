@@ -1,0 +1,75 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var k=Console.ReadLine();
+            int kk=int.Parse(k);
+
+            var l = Console.ReadLine();
+            int ll = int.Parse(l);
+
+            var m = Console.ReadLine();
+            int mm = int.Parse(m);
+
+            var n = Console.ReadLine();
+            int nn = int.Parse(n);
+
+            var num = Console.ReadLine();
+            int number = int.Parse(num);
+            int temp = 0;
+             temp = number;
+            if (kk==1||ll==1||mm==1||nn==1 )
+            {
+                Console.WriteLine(number);
+             
+            }
+            else 
+            {
+
+                for (int i = 1; i <=number; i++)
+                {
+                    if ((i%kk!=0)&& (i % ll != 0)&& (i % mm != 0)&& (i % nn != 0))
+                    {
+                        temp--;
+                    }
+                   
+
+                }
+                Console.WriteLine(temp);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+}
