@@ -1,0 +1,87 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+            
+            var money=Console.ReadLine();
+            int doller = int.Parse(money);
+
+            int temp = doller;
+            for (int i = 0; i < temp; i++)
+            {
+                if (doller == 0) {break;}
+                if (doller>=100)
+                {
+                    doller = doller - 100;
+                    counter++;
+
+                }
+                else if(doller>=20&&doller<100)
+                {
+                    doller = doller - 20;
+                    counter++;
+                
+                }
+                else if (doller >= 10 && doller < 20)
+                {
+                    doller = doller - 10;
+                    counter++;
+
+                }
+                else if (doller >= 5 && doller < 10)
+                {
+                    doller = doller - 5;
+                    counter++;
+
+                }
+                else 
+                {
+                    doller--;
+                    counter++;
+                
+                }
+
+            }
+            Console.WriteLine(counter);
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
