@@ -1,0 +1,78 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+
+            var num = Console.ReadLine();
+            int num_matches = int.Parse(num);
+            int[] arr = new int[60];
+            int j=0;    
+            for (int i = 0; i < num_matches; i++)
+            {
+                var color= Console.ReadLine();
+                var color1 = color.Split(' ');
+                int team_host = int.Parse(color1[0]);
+                int team_gust = int.Parse(color1[1]);
+
+                arr[i+j] = team_host;
+                arr[i+j+1] = team_gust;
+                j++;
+            }
+            for (int i= 0; i < num_matches*2;)
+            {
+                for (int a = 1; a < (num_matches * 2);)
+                {
+                    
+                    if (arr[i] == arr[a])
+                    {
+                        counter++;
+                    }
+                    a += 2;
+                   
+                }
+                i += 2;
+            }
+            Console.WriteLine(counter);
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
