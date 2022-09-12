@@ -1,0 +1,95 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+             var num =Console.ReadLine();
+             int number = int.Parse(num);
+
+            int counter = 0;
+            var word=Console.ReadLine();
+
+            word = word.ToLower();
+            
+            char[] arrstring = new char[number];
+            for (int i = 0; i < number; i++)
+            {
+                arrstring[i] = word[i];
+                
+            }
+            Array.Sort(arrstring);
+           /* for (int i = 0; i < number; i++)
+            {
+                Console.WriteLine(arrstring[i]);
+            }*/
+            int index = 0;
+            for (int i = 0; i < number; i++)
+            {
+                bool flag = false;
+                for (int j = 1+index; j < number; j++)
+                {
+                    if (arrstring[i] != arrstring[j])
+                    {
+                        continue;
+
+                    }
+                    else
+                    {
+                        flag = true;
+                        break;
+                    } 
+                }
+                if (flag==false)
+                {
+                    counter++;
+                }
+                index++;
+                
+            }
+            
+            if (counter>=26)
+            {
+                Console.WriteLine("Yes");
+            }
+            else Console.WriteLine("No");
+            
+           //Console.WriteLine(counter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
