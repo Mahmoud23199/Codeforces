@@ -1,0 +1,41 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            
+
+            var num1 = Console.ReadLine();
+            
+            
+            var num2 =Console.ReadLine();
+
+
+            int[] Display=new int[100];
+            for (int i = 0; i < num1.Length; i++)
+            {
+                if (num1[i] == num2[i])
+                {
+                    Display[i] = 0;
+
+                }
+                else Display[i] = 1;
+
+            }
+
+            for (int i = 0; i < num1.Length; i++)
+            {
+                Console.Write(Display[i]);
+
+            }
+          
+            
+
+        }
+    }
+}
