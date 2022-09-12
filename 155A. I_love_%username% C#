@@ -1,0 +1,90 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+            var itr_string = Console.ReadLine();
+            
+            int itration=int.Parse(itr_string);
+            int min = 10001;
+            int max = 0;
+            var num = Console.ReadLine();
+
+            for (int i = 0; i < itration; i++)
+            {
+                
+                var temp = num.Split(' ');
+                int number = int.Parse(temp[i]);
+
+                if (number < min)
+                {
+
+                    min = number;
+                    if (i != 0)
+                    {
+                        counter++;
+                    }
+
+
+                }
+                if (number > max)
+                {
+                    max = number;
+                    if (i != 0)
+                    {
+                        counter++;
+                    }
+
+                }
+            }
+            Console.WriteLine(counter);
+          
+            
+           
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
