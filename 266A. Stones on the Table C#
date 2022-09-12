@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CodePS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+
+            String count = Console.ReadLine();
+            int res = Convert.ToInt32(count);
+
+            String val = Console.ReadLine();
+            int counter = 0;
+            for (int i = 0; i < res; i++)
+            {
+                if (i == res - 1) { break; }
+
+                else if (val[i]==val[i+1])
+                {
+                    counter++;
+                }
+
+                
+            }
+            Console.WriteLine(counter);
+
+        }
+    }
+}
