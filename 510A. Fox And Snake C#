@@ -1,0 +1,103 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int temp = 0;
+
+            var num_string = Console.ReadLine();
+            var num = num_string.Split(' ');
+
+            int row_n=int.Parse(num[0]);
+            int col_m=int.Parse(num[1]);
+
+           
+            for (int i = 0; i < row_n; i++)
+            {
+                for (int j = 0; j < col_m; j++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        if (j == col_m - 1) { Console.WriteLine("#"); }
+                        else
+                            Console.Write("#");
+                    }
+                    else
+                    {   
+                        if (temp % 2 == 0)//even
+                        {
+                            if (j == col_m - 1) { Console.WriteLine("#"); }
+                            else
+                            {
+                                Console.Write(".");
+                            }
+                        }
+                        else 
+                        {
+                            if (j == col_m - 1) { Console.WriteLine("."); }
+                            else if (j == 0) { Console.Write("#"); }
+                            else
+                            {
+                                Console.Write(".");
+                            }
+
+
+                        }
+                    }
+                }
+                if (i%2 !=0)//odd
+                {
+                    temp++;
+                }
+               
+
+            }
+          
+
+           
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
