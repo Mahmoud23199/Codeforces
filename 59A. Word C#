@@ -1,0 +1,42 @@
+using System.Collections;
+
+namespace ProblemSolveing
+{
+    class TestClass
+    {
+        static void Main(string[] args)
+        {
+
+
+            string word = Console.ReadLine();
+
+            int upper=0, lower=0;
+            bool flag;
+
+            for (int i = 0; i <word.Length; i++)
+            {
+                flag = Char.IsUpper(word[i]);
+                if (flag==true)
+                { 
+                    upper++;
+                    
+                }
+                else lower++;    
+
+            }
+
+            if (upper>lower)
+            {
+                word = word.ToUpper();
+                Console.WriteLine(word);
+            }
+            else 
+            {
+                word = word.ToLower();
+                Console.WriteLine(word);
+            }
+        }
+        
+    }
+    
+}
