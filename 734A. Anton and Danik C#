@@ -1,0 +1,39 @@
+using System;
+
+namespace ProblemSolveingRound
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            string numTerm = Console.ReadLine();
+            int Ant = 0;
+            int Dot = 0;
+
+            string win = Console.ReadLine();
+            for (int i = 0; i < int.Parse(numTerm); i++)
+            {
+                if (win[i]=='D')
+                {
+                    Dot++;
+                }
+                else { Ant++; }
+            }
+          if(Ant > Dot) 
+            {
+
+                Console.WriteLine("Anton");
+            }
+          else if(Ant < Dot) 
+            {
+                Console.WriteLine("Danik");
+            }
+            else { Console.WriteLine("Friendship"); }
+            
+
+
+
+
+        }
+    }
+}
