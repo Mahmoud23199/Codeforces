@@ -1,0 +1,31 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            var num =Console.ReadLine();
+
+            var tep=Console.ReadLine();
+            var temp=tep.Split(' ');
+
+            int[] arr = new int[int.Parse(num)];
+            for (int i = 0; i < int.Parse(num); i++)
+            {
+                int number = int.Parse(temp[i]);
+
+                arr[number - 1] = (i + 1);
+
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write("{0}",arr[i]+" ");
+            }
+
+        }
+    }
+}
