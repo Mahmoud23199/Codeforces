@@ -1,0 +1,120 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, e;
+    int p = 0, c = 0;
+    cin >> n;
+
+    for(int i = 0; i < n; i++)
+    {
+        cin >> e;
+        if(e == -1)
+        {
+            if(p > 0)
+                p--;
+            else
+                c++;
+        }
+        else
+            p += e;
+    }
+
+    cout << c << endl;
+    return 0;
+}
+
+//c# code 
+/*
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long hired = 0;
+            long crime =0;
+            var itr_string = Console.ReadLine();
+            
+            int itration=int.Parse(itr_string);
+            
+            var num = Console.ReadLine();
+
+            for (int i = 0; i < itration; i++)
+            {
+                
+                var temp = num.Split(' ');
+                long even = long.Parse(temp[i]);
+
+                if (even >0) 
+                {
+                    hired=hired+even;
+
+                }
+                else 
+                {
+                    if (hired != 0)
+                    {
+                        hired--;
+                    }
+                    else
+                    {
+
+                        even = even * -1;
+                        crime += even;
+                    }
+                }
+
+                
+            }
+            Console.WriteLine(crime);
+          
+            
+           
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
+*/
