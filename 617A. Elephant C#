@@ -1,0 +1,35 @@
+using System.Collections;
+
+
+class TestClass
+{
+    static void Main(string[] args)
+    {
+        int temp;
+        int ftemp;
+        var x=Console.ReadLine();
+        int z=int.Parse(x);
+        if (z<=5)
+        {
+            Console.WriteLine("1");
+        }
+        else 
+        {
+            temp = z /5;
+            ftemp = z % 5;
+
+            ftemp = ftemp * 5;
+            if (ftemp !=0)
+            {
+                Console.WriteLine(temp + 1);
+            }
+         
+            
+            else Console.WriteLine(temp);
+            
+    
+        
+        
+        }
+    }
+}
