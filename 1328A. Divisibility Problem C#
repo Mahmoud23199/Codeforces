@@ -1,0 +1,86 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+             var num =Console.ReadLine();
+             int number = int.Parse(num);
+
+            int counter = 0;
+            int[]arr=new int[number*2];
+            int[]arrint=new int[number];
+            int j = 0;
+            for (int i = 0; i < number; i++)
+            {
+               var ss =Console.ReadLine();
+               var s=ss.Split(' ');
+               arr[j+i] = int.Parse(s[0]);
+               arr[j + i+1] = int.Parse(s[1]);
+                j++;
+            }
+            
+            int index = 0;
+          for (int i = 0; i < number*2; i++)
+          {
+              if (i == number) { break; }
+              if (arr[i+index] % arr[i+index+1] ==0)
+              {
+                  arrint[i] = 0;
+                    index++;
+              }
+              else 
+              {
+                 
+                  arrint[i] =( arr[i + index + 1] - (arr[i + index] % arr[i + index + 1]));
+                  index++;
+                   
+              }
+
+          }
+          for (int i = 0; i < arrint.Length; i++)
+          {
+              Console.WriteLine(arrint[i]);
+
+          }
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
