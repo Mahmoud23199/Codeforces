@@ -1,0 +1,72 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+
+            var gust = Console.ReadLine();
+            var host = Console.ReadLine();
+            var letter= Console.ReadLine();
+
+           
+
+           
+                //sort using linq
+               string temp= String.Concat(letter.OrderBy(p => p));
+
+                string temp1= String.Concat((gust+host).OrderBy(p => p));
+
+                if (temp==temp1)
+                {
+                    Console.WriteLine("YES");
+                }
+                else
+                {
+                    Console.WriteLine("NO");
+                }
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
