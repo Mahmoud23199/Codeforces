@@ -1,0 +1,42 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            double tp = 0;
+
+            var num = Console.ReadLine();
+            int number = int.Parse(num);
+            
+            var drink =Console.ReadLine();
+            var temp = (drink.Split(' '));
+
+            int[]drinks=new int[number];
+            
+            for (int i = 0; i < number; i++)
+            {
+                drinks[i] = int.Parse(temp[i]);
+            }
+
+            for (int i = 0; i < number; i++)
+            {
+
+                tp += (drinks[i] / (double)100);
+                
+            }
+            
+            double lo =((tp / number) * (float)100);
+
+            Console.WriteLine(lo);
+            
+          
+            
+
+        }
+    }
+}
