@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std ;
+
+int main ()
+{
+	string line1;
+	string line2;
+	
+	cin >> line1;
+	cin >> line2;
+
+	for (int i = 0; i < line1.size(); i++)
+	{
+		int line11 = tolower(line1[i]);
+		int line22 = tolower(line2[i]);
+
+
+		if (line11 > line22)
+		{
+			cout << "1"<<endl;
+
+			return 0;
+		}
+		if (line11 < line22)
+		{
+			cout << "-1"<<endl;
+			return 0;
+
+		}
+		
+
+	}
+	cout << "0" << endl;
+	
+
+
+
+
+
+	system("pasue");
+
+
+	return 0;
+}
