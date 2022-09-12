@@ -1,0 +1,44 @@
+#include <iostream>
+#include<string>
+#include <algorithm>
+using namespace std;
+int main()
+{
+	char lin[100];
+	int count = 0;
+	string line;
+	cin >> line;
+
+	for (int i = 0; i < line.size(); i++)
+	{
+	
+		if (line[i]=='+')
+		{
+			continue;
+			
+		}
+		else 
+		{
+			lin[count] = line[i];
+			count++;
+		}
+
+	}
+	
+	sort(lin,lin+count);
+	
+	
+	for (int i = 0; i <count; i++)
+	{
+
+		cout << lin[i] ;
+
+		if (i == count - 1){ break; }
+		cout << "+";
+
+	}
+
+	cout << endl;
+
+	return 0;
+}
