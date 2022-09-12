@@ -1,0 +1,43 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {  
+            var line1 = Console.ReadLine();
+            var temp = line1.Split(' ');
+            
+            int counter = 0;
+
+            int number =int.Parse(temp[0]);
+            int hight = int.Parse(temp[1]);
+
+            var line2 = Console.ReadLine();
+            var temp2 = line2.Split(' ');
+
+            string[] arr=new string[number];
+            for (int i = 0; i < number; i++)
+            {
+                arr[i] = temp2[i];
+
+            }
+
+            for (int i = 0; i < number; i++)
+            {
+                if (hight < int.Parse(arr[i]))
+                {
+                    counter += 2;
+                }
+                else { counter++; }
+
+            }
+
+            Console.WriteLine(counter);
+
+
+        }
+    }
+}
