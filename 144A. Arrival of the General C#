@@ -1,0 +1,80 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+             var num =Console.ReadLine();
+            int number = int.Parse(num);
+
+            var arr1=Console.ReadLine();
+            var arr2 = arr1.Split(' ');
+            int[]arr=new int[number];
+
+            int min = 101;
+            int maxi=0, mini=0 ,max=0;
+            int count = 0;
+            for (int i = 0; i < number; i++)
+            {
+                arr[i] = int.Parse(arr2[i]);
+
+            }
+            for (int i = 0; i < number; i++)
+            {
+                if (arr[i]>max)
+                {
+                    max=arr[i];
+                    maxi=i;
+
+                }
+                if (arr[i]<=min)
+                {
+                    min=arr[i];
+                    mini=i;
+
+                }
+            }
+            if (maxi > mini)
+            {
+                mini++;
+            }
+            Console.WriteLine( maxi + (number - 1) - mini);
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         }
+
+
+
+
+
+
+        }
+
+
+
+
+
+    
+}
