@@ -1,0 +1,61 @@
+using System.Collections;
+
+namespace ProblemSolveing
+{
+    class TestClass
+    {
+        static void Main(string[] args)
+        {
+           int enter, exit , capsity=0;
+           var numTerm = Console.ReadLine();
+            int counter = 0;
+            int tem = 0;
+            for (int i = 0; i <int.Parse( numTerm); i++)
+            {
+
+            
+                var temp = Console.ReadLine();
+                var sp = temp.Split(" ");
+
+                exit =int.Parse(sp[0]);
+                enter =int.Parse(sp[1]);
+
+                if (counter == 0)
+                {
+                    tem += enter;
+                }
+                else
+                {
+                    tem -= exit;
+                    tem += enter;
+                }
+                 counter++;
+
+                if (capsity < tem) 
+                {
+                 capsity = tem; 
+                }
+            }
+            Console.WriteLine(capsity);
+        }
+
+
+
+   
+    }
+    /*
+    public class Student 
+    {
+        public string FullName { get; set; }
+        public int Age { get; set; }
+        public int Id { get; set; }
+        public Course Course { get; set; }
+
+    }
+    public class Course 
+    {
+        public string CourseName { get; set; }
+    }
+
+*/
+}
