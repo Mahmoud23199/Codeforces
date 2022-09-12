@@ -1,0 +1,78 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int temp = 0;
+
+            var num_string = Console.ReadLine();
+            var num = num_string.Split(' ');
+
+            int red=int.Parse(num[0]);
+            int blue=int.Parse(num[1]);
+            int[]arr=new int[2];
+            if (red<blue)
+            {
+                arr[0]=red;
+                temp = blue - red;
+                temp = temp / 2;
+                arr[1]=temp;
+            }
+            else
+            {
+                arr[0]=blue;
+                temp = red - blue;
+                temp = temp / 2;
+                arr[1] = temp;
+            }
+            Console.WriteLine (arr[0]+" " + arr[1]);
+
+          
+
+           
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+       
+           
+
+
+
+
+
+
+    }
+
+
+
+
+
+    
+}
