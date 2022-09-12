@@ -1,0 +1,57 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            
+
+            var num1 = Console.ReadLine();
+
+            int number = int.Parse(num1);
+
+            for (int i = 0; i < number; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    if (i<number-1)
+                    {
+                        Console.Write("I hate that");
+                        Console.Write(" ");
+                    }
+                    else {
+                        Console.Write("I hate it");
+                        Console.Write(" ");
+                    }
+                    
+                }
+                else
+                {
+                    
+
+                    if (i<number-1)
+                    {
+                        Console.Write("I love that");
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write("I love it");
+                        Console.Write(" ");
+                    }
+                }  
+                
+
+
+            }
+            
+          
+            
+
+        }
+    }
+}
