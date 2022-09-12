@@ -1,0 +1,77 @@
+using System;
+using System.Text;
+
+namespace ProblemSolveingRound
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           int  temp = 1;
+
+            int counter = 0;
+            var num1 = Console.ReadLine();
+            var number = num1.Split(' ');
+
+            int[]arr=new int[4];
+            for (int i = 0; i < 4; i++)
+            {
+                arr[i] = int.Parse(number[i]);
+
+            }
+            Array.Sort(arr);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i+1>3)
+                {
+                    break;
+                }
+                else if (arr[i] == arr[i+1])
+                {
+                    counter++;
+                }
+            }
+            Console.WriteLine(counter);
+            /*
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 1; j < 4; j++)
+                {
+                    if ((j+i)>3)
+                    {
+                        temp++; //any thing
+                    }
+                    else if (int.Parse(number[i]) == int.Parse(number[j+i]))
+                    {
+                        counter++;
+                    }
+                }
+            }
+
+
+
+
+            if (counter>4)
+            {
+                counter = 1;
+                counter = 4 - counter;
+
+                Console.WriteLine(counter);
+            }
+            else if (counter == 0) 
+            {
+
+                Console.WriteLine(counter);
+               
+            }else Console.WriteLine(counter);
+
+
+            */
+        }
+            
+          
+            
+
+        
+    }
+}
